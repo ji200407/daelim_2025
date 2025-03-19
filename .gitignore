@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/dart,flutter,androidstudio,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=dart,flutter,androidstudio,windows
+# Created by https://www.toptal.com/developers/gitignore/api/flutter,dart,androidstudio,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=flutter,dart,androidstudio,windows
 
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
@@ -250,4 +250,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/dart,flutter,androidstudio,windows
+# End of https://www.toptal.com/developers/gitignore/api/flutter,dart,androidstudio,windows
