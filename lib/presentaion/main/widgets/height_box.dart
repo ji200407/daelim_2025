@@ -2,7 +2,8 @@ import 'package:daelim_2025/presentaion/common/widgets/white_box.dart';
 import 'package:flutter/material.dart';
 
 class HeightBox extends StatefulWidget {
-  const HeightBox({super.key});
+  final Function(double height) onChanged;
+  const HeightBox({super.key, required this.onChanged});
 
   @override
   State<HeightBox> createState() => _HeightBoxState();
@@ -11,17 +12,17 @@ class HeightBox extends StatefulWidget {
 class _HeightBoxState extends State<HeightBox> {
   double _height = 100.0;
 
-  void _decreaseHeight() {
-    setState(() {
-      _height--;
-    });
-  }
+  // void _decreaseHeight() {
+  //   setState(() {
+  //     _height--;
+  //   });
+  // }
 
-  void _increaseHeight() {
-    setState(() {
-      _height++;
-    });
-  }
+  // void _increaseHeight() {
+  //   setState(() {
+  //     _height++;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class _HeightBoxState extends State<HeightBox> {
           Text('Height(CM)', style: TextStyle(fontSize: 18)),
           //숫자
           Text(
-            '$_height',
+            '${_height.toStringAsFixed(1)}', //뒤에 .뒤로 더 붙이려면 {} 넣어야 함함
             style: TextStyle(
               fontSize: 60,
               fontWeight: FontWeight.bold,
@@ -47,10 +48,15 @@ class _HeightBoxState extends State<HeightBox> {
             value: _height,
             min: 50.0,
             max: 300.0,
+            activeColor: Color(0xFF6C63FF),
             onChanged: (double value) {
+              //1.이곳
+              //function
               setState(() {
                 _height = value;
               });
+              //2.이곳(여기가 더 좋음ui랑 분리)
+              widget.onChanged(_height);
             },
           ),
         ],

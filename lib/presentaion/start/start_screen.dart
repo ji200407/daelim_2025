@@ -67,8 +67,10 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //
       backgroundColor: Color(0xFF6C63FF),
       body: SafeArea(
+        //네비게이션 뻬고 영역
         child: Center(
           child: Container(
             width: 280,

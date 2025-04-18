@@ -8,7 +8,7 @@ class CircleIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap, //컨테이너 눌럿을때 위에써야함함
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,

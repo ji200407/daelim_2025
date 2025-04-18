@@ -19,11 +19,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //디버그 베너 삭제
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.light, //다크 모드 ,라이트 모드
       routerConfig: router,
     );
   }

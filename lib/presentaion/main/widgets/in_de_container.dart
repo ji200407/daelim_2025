@@ -22,7 +22,7 @@ class InDeContainer extends StatelessWidget {
     return WhiteBox(
       padding: EdgeInsets.all(27),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center, //정렬상하
         children: //타이틀
             [
           Text(title, style: TextStyle(fontSize: 18)),
@@ -37,7 +37,7 @@ class InDeContainer extends StatelessWidget {
           ),
           //Minus-Plus버튼튼
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center, //좌우우
             spacing: 20,
             children: [
               CircleIconButton(onTap: onMinus, icon: LucideIcons.minus),
